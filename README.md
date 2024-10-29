@@ -25,12 +25,12 @@ Key Features:
 
 Technical Implementation:
 
-  *Framework: ROS Noetic
-  *Operating System: Ubuntu 20.04
-  *Python Version: 3.8.10
-  *Deep Learning Framework: PyTorch 1.10
-  *Simulation Environment: ROS Gazebo
-  *Neural Network: Twin Delayed Deep Deterministic Policy Gradient (TD3)
+  * Framework: ROS Noetic
+  * Operating System: Ubuntu 20.04
+  * Python Version: 3.8.10
+  * Deep Learning Framework: PyTorch 1.10
+  * Simulation Environment: ROS Gazebo
+  * Neural Network: Twin Delayed Deep Deterministic Policy Gradient (TD3)
 
 
 
@@ -39,7 +39,6 @@ Technical Implementation:
 
 
 More detailed information can be found in the paper! However, it is still under writing~~
-```
 
 ## Installation
 Main dependencies: 
