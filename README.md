@@ -1,35 +1,44 @@
-# DRL-robot-navigation
+# Enhanced Obstacle Avoidance in Robot
 
 
-Deep Reinforcement Learning for mobile robot navigation in ROS Gazebo simulator. Using Twin Delayed Deep Deterministic Policy Gradient (TD3) neural network, a robot learns to navigate to a random goal point in a simulated environment while avoiding obstacles. Obstacles are detected by laser readings and a goal is given to the robot in polar coordinates. Trained in ROS Gazebo simulator with PyTorch.  Tested with ROS Noetic on Ubuntu 20.04 with python 3.8.10 and pytorch 1.10.
+This project implements an advanced mobile robot navigation system that integrates Deep Reinforcement Learning (DRL) with YOLOv8-based object detection. The system operates in a ROS Gazebo simulator environment, utilizing a Twin Delayed Deep Deterministic Policy Gradient (TD3) neural network architecture for path planning and collision avoidance.
 
-**!!!Use the issue template to submit your issue**
+Key Features:
 
-**Installation and code overview tutorial available** [here](https://medium.com/@reinis_86651/deep-reinforcement-learning-in-mobile-robot-navigation-tutorial-part1-installation-d62715722303)
+  1.Sensor Fusion:
+  
+     *RGB camera for visual input
+     *Depth camera for distance measurement
+     *LiDAR sensor for obstacle detection and ranging
+     *Integration of visual and LiDAR data to avoid the curse of dimensionality
 
-Training example:
-<p align="center">
-    <img width=100% src="https://github.com/reiniscimurs/DRL-robot-navigation/blob/main/training.gif">
-</p>
+  2.Object Detection:
+
+     *Implementation of YOLOv8 for real-time movable obstacle detection
+     *Dynamic environmental information processing
+
+  3.Navigation System:
+
+     *Continuous action space for smooth navigation
+     *Real-time obstacle avoidance
+
+
+Technical Implementation:
+
+  *Framework: ROS Noetic
+  *Operating System: Ubuntu 20.04
+  *Python Version: 3.8.10
+  *Deep Learning Framework: PyTorch 1.10
+  *Simulation Environment: ROS Gazebo
+  *Neural Network: Twin Delayed Deep Deterministic Policy Gradient (TD3)
 
 
 
-**ICRA 2022 and IEEE RA-L paper:**
+
+**reference**
 
 
-Some more information about the implementation is available [here](https://ieeexplore.ieee.org/document/9645287?source=authoralert)
-
-Please cite as:<br/>
-```
-@ARTICLE{9645287,
-  author={Cimurs, Reinis and Suh, Il Hong and Lee, Jin Han},
-  journal={IEEE Robotics and Automation Letters}, 
-  title={Goal-Driven Autonomous Exploration Through Deep Reinforcement Learning}, 
-  year={2022},
-  volume={7},
-  number={2},
-  pages={730-737},
-  doi={10.1109/LRA.2021.3133591}}
+More detailed information can be found in the paper! However, it is still under writing~~
 ```
 
 ## Installation
@@ -42,38 +51,45 @@ Main dependencies:
 Clone the repository:
 ```shell
 $ cd ~
-### Clone this repo
-$ git clone https://github.com/reiniscimurs/DRL-robot-navigation
+$ git clone https://github.com/Yang-Yifan0313/TD3_YOLOv8.git
 ```
-The network can be run with a standard 2D laser, but this implementation uses a simulated [3D Velodyne sensor](https://github.com/lmark1/velodyne_simulator)
 
+You should know that this repository includes two workspaces, namely catkin_ws and YOLOv8_detection.
 Compile the workspace:
 ```shell
-$ cd ~/DRL-robot-navigation/catkin_ws
+$ cd ~/TD3_YOLOv8/catkin_ws
 ### Compile
+$ catkin_make_isolated
+### Compile another
+$ cd ~/TD3_YOLOv8/YOLOv8_detection
 $ catkin_make_isolated
 ```
 
 Open a terminal and set up sources:
 ```shell
-$ export ROS_HOSTNAME=localhost
-$ export ROS_MASTER_URI=http://localhost:11311
-$ export ROS_PORT_SIM=11311
-$ export GAZEBO_RESOURCE_PATH=~/DRL-robot-navigation/catkin_ws/src/multi_robot_scenario/launch
-$ source ~/.bashrc
-$ cd ~/DRL-robot-navigation/catkin_ws
-$ source devel_isolated/setup.bash
+###Open the gazebo world file, simulated agent file and visualization platform.
+$ cd ~/TD3_YOLOv8/catkin_ws/src/multi_robot_scenario
+$ roslaunch multi_robot_scenario TD3_world.launch  
+$ roslaunch gazebo_ros pioneer3dx.gazebo.launch
+$ rviz
+
+###Start YOLOv8_detection  program
+###If you have correct conda environment
+$ conda activate dxtorch
+$ cd ~/TD3_YOLOv8/YOLOv8_detection/src/Yolov8_ros/yolov8_ros/launch
+$ roslaunch yolov8_ros yolo_v8.launch
+###Display RGB image and depth image with added boxes 
 ```
 
 Run the training:
 ```shell
-$ cd ~/DRL-robot-navigation/TD3
+$ cd ~/TD3_YOLOv8/TD3
 $ python3 train_velodyne_td3.py
 ```
 
 To check the training process on tensorboard:
 ```shell
-$ cd ~/DRL-robot-navigation/TD3
+$ cd ~/TD3_YOLOv8/TD3
 $ tensorboard --logdir runs
 ```
 
@@ -84,18 +100,10 @@ $ killall -9 rosout roslaunch rosmaster gzserver nodelet robot_state_publisher g
 
 Once training is completed, test the model:
 ```shell
-$ cd ~/DRL-robot-navigation/TD3
+$ cd ~/TD3_YOLOv8/TD3
 $ python3 test_velodyne_td3.py
 ```
 
-Gazebo environment:
-<p align="center">
-    <img width=80% src="https://github.com/reiniscimurs/DRL-robot-navigation/blob/main/env1.png">
-</p>
 
-Rviz:
-<p align="center">
-    <img width=80% src="https://github.com/reiniscimurs/DRL-robot-navigation/blob/main/velodyne.png">
-</p>
 
 
