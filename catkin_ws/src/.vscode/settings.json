@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/yyf/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/yyf/MyRos/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/yyf/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/yyf/MyRos/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

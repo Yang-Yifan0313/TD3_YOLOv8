@@ -1,0 +1,1 @@
+/home/yyf/DRL/catkin_ws/devel/.private/robot_vision/share/gennodejs/ros/robot_vision/msg/BoundingBox.js

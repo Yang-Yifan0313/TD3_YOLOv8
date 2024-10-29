@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yyf/catkin_ws/devel/include/**",
+        "/home/yyf/MyRos/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_conversions/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_costmap_plugins/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_odom/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_rviz_plugins/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_slam/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_sync/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_util/include/**",
+        "/home/yyf/catkin_ws/src/rtabmap_ros/rtabmap_viz/include/**",
+        "/home/yyf/MyRos/src/turtlebot3_simulations/turtlebot3_fake/include/**",
+        "/home/yyf/MyRos/src/turtlebot3_simulations/turtlebot3_gazebo/include/**",
+        "/home/yyf/MyRos/src/turtlebot3/turtlebot3_slam/include/**",
+        "/home/yyf/DRL-robot-navigation-main/catkin_ws/src/velodyne_simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

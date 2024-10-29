@@ -1,0 +1,42 @@
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target _robot_vision_generate_messages_check_deps_BoundingBox[0m
+[35m[1mScanning dependencies of target _robot_vision_generate_messages_check_deps_BoundingBoxes[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target qr_detector_nodelet[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _robot_vision_generate_messages_check_deps_BoundingBox
+[  0%] Built target _robot_vision_generate_messages_check_deps_BoundingBoxes
+[  7%] [32mBuilding CXX object CMakeFiles/qr_detector_nodelet.dir/src/qr_detector_nodelet.cpp.o[0m
+[35m[1mScanning dependencies of target robot_vision_generate_messages_eus[0m
+[35m[1mScanning dependencies of target robot_vision_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target robot_vision_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target robot_vision_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target robot_vision_generate_messages_py[0m
+[ 14%] [34m[1mGenerating Python from MSG robot_vision/BoundingBoxes[0m
+[ 42%] [34m[1mGenerating EusLisp manifest code for robot_vision[0m
+[ 42%] [34m[1mGenerating Lisp code from robot_vision/BoundingBox.msg[0m
+[ 42%] [34m[1mGenerating EusLisp code from robot_vision/BoundingBoxes.msg[0m
+[ 42%] [34m[1mGenerating EusLisp code from robot_vision/BoundingBox.msg[0m
+[ 50%] [34m[1mGenerating Javascript code from robot_vision/BoundingBox.msg[0m
+[ 57%] [34m[1mGenerating C++ code from robot_vision/BoundingBox.msg[0m
+[ 64%] [34m[1mGenerating Javascript code from robot_vision/BoundingBoxes.msg[0m
+[ 71%] [34m[1mGenerating Lisp code from robot_vision/BoundingBoxes.msg[0m
+[ 78%] [34m[1mGenerating C++ code from robot_vision/BoundingBoxes.msg[0m
+[ 85%] [34m[1mGenerating Python from MSG robot_vision/BoundingBox[0m
+[ 85%] Built target robot_vision_generate_messages_lisp
+[ 85%] Built target robot_vision_generate_messages_nodejs
+[ 85%] Built target robot_vision_generate_messages_cpp
+[ 92%] [34m[1mGenerating Python msg __init__.py for robot_vision[0m
+[ 92%] Built target robot_vision_generate_messages_py
+[ 92%] Built target robot_vision_generate_messages_eus
+[35m[1mScanning dependencies of target robot_vision_generate_messages[0m
+[ 92%] Built target robot_vision_generate_messages
+[100%] [32m[1mLinking CXX shared library /home/yyf/DRL/catkin_ws/devel/.private/robot_vision/lib/libqr_detector_nodelet.so[0m
+[100%] Built target qr_detector_nodelet

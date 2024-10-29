@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <actor name="actor">
+      <skin>
+        <filename>model://person_walking/meshes/walking.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>model://person_walking/meshes/walking.dae</filename>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>-5 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>10</time>
+            <pose>5 0 0 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>10.1</time>
+            <pose>5 0 0 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>20.1</time>
+            <pose>-5 0 0 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>20.2</time>
+            <pose>-5 0 0 0 0 0</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+  </world>
+</sdf>

@@ -1,0 +1,8 @@
+prefix=/home/yyf/DRL/catkin_ws/devel/.private/robot_vision
+
+Name: robot_vision
+Description: Description of robot_vision
+Version: 0.0.0
+Cflags: -I/home/yyf/DRL/catkin_ws/devel/.private/robot_vision/include -I/home/yyf/DRL/catkin_ws/src/robot_vision/include
+Libs: -L${prefix}/lib -lqr_detector_nodelet
+Requires: roscpp nodelet sensor_msgs cv_bridge image_transport

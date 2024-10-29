@@ -1,0 +1,1 @@
+/home/yyf/DRL/catkin_ws/devel/.private/robot_vision/lib/python3/dist-packages/robot_vision/msg/_BoundingBox.py
